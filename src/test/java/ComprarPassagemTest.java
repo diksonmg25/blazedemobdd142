@@ -86,6 +86,5 @@ public class ComprarPassagemTest {
     assertEquals(driver.findElement(By.cssSelector("h1")).getText(), "Thank you for your purchase today!");
     assertEquals(driver.findElement(By.cssSelector("tr:nth-child(3) > td:nth-child(2)")).getText(), "555 USD");    
     }
-  
 }
 
