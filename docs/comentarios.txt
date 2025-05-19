@@ -16,6 +16,8 @@ Um teste será composto por 2 arquivos:
 - arquivo de automação, que faz referência ao .feature (.java)
 
 
+Projeto utilizando a abordagem Page Object / Page Factory
+
 
 
 
