@@ -17,6 +17,22 @@ Um teste será composto por 2 arquivos:
 
 
 Projeto utilizando a abordagem Page Object / Page Factory
+- Pode usar ou não BDD
+--> Foco na manutenção e reaproveitamento a longoo prazo
+--> Útil para projetos com Ciclo de Vida de Desenvolvimento de Software Longos
+(CVDS/SDLC)
+
+
+Um teste vão ser vários arquivos...
+- Um arquivo de mapeamento para para cada página/tela ou região da página (*Page.java)
+- Um arquivo de base para tudo que há em comum nos mapeamentos
+- Um arquivo de negócio, escrito em Gherkin (.feature)
+- Um arquivo de automação que faz referência ao .feature (.java) e ao mapeamento
+por projeto:
+- um arquivo de hooks (Before e After centralizados)
+- um arquivo runner (executar o teste / maestro) // executar/acompanhar o andamento de tudo 
+
+
 
 
 
