@@ -16,7 +16,7 @@ Um teste será composto por 2 arquivos:
 - arquivo de automação, que faz referência ao .feature (.java)
 
 
-Projeto utilizando a abordagem Page Object / Page Factory
+Projeto utilizando a abordagem Page Objects / Page Factory
 - Pode usar ou não BDD
 --> Foco na manutenção e reaproveitamento a longoo prazo
 --> Útil para projetos com Ciclo de Vida de Desenvolvimento de Software Longos
@@ -25,7 +25,8 @@ Projeto utilizando a abordagem Page Object / Page Factory
 
 Um teste vão ser vários arquivos...
 - Um arquivo de mapeamento para para cada página/tela ou região da página (*Page.java)
-- Um arquivo de base para tudo que há em comum nos mapeamentos
+- Um arquivo de CommonPage para tudo que há em comum nos mapeamentos
+- Um arquivo chamado Base para definir o Selenium que será compartilhado(bola)
 - Um arquivo de negócio, escrito em Gherkin (.feature)
 - Um arquivo de automação que faz referência ao .feature (.java) e ao mapeamento
 por projeto:
