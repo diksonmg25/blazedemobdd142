@@ -15,7 +15,7 @@ import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class ComprarPassagemBDD {
 
@@ -25,7 +25,7 @@ public class ComprarPassagemBDD {
 
   @Before
   public void iniciar() {
-    WebDriverManager.chromedriver().setup();
+    //WebDriverManager.chromedriver().setup();
     // garantir o driver correto para o Chrome
     driver = new ChromeDriver(); // instancia o driver como ChromeDriver
 

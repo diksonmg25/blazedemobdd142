@@ -17,7 +17,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 // 2 - Classe
@@ -36,7 +36,7 @@ public class ComprarPassagemTest {
 
   @BeforeEach
   public void setUp() {
-     WebDriverManager.chromedriver().setup();
+     //WebDriverManager.chromedriver().setup();
     driver = new ChromeDriver();
        js = (JavascriptExecutor) driver;
     vars = new HashMap<String, Object>();

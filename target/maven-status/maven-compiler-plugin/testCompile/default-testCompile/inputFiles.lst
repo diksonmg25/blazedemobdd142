@@ -5,3 +5,5 @@ C:\Iterasys\blazedemo142\src\test\java\pages\HomePage.java
 C:\Iterasys\blazedemo142\src\test\java\pages\ReservePage.java
 C:\Iterasys\blazedemo142\src\test\java\steps\ComprarPassagemBDD.java
 C:\Iterasys\blazedemo142\src\test\java\stepsPO\ComprarPassagemPO.java
+C:\Iterasys\blazedemo142\src\test\java\stepsPO\Hooks.java
+C:\Iterasys\blazedemo142\src\test\java\stepsPO\Runner.java

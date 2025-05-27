@@ -1,7 +1,9 @@
+stepsPO\Hooks.class
 ComprarPassagemTest.class
 pages\CommonPage.class
 pages\ReservePage.class
 pages\HomePage.class
 steps\ComprarPassagemBDD.class
+stepsPO\Runner.class
 pages\Base.class
 stepsPO\ComprarPassagemPO.class

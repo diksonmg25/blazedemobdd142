@@ -34,6 +34,23 @@ por projeto:
 - um arquivo runner (executar o teste / maestro) // executar/acompanhar o andamento de tudo 
 
 
+Sobre Drivers de Navegador
+- Um driver é um controlador que fica entre o Selenium e o Browser
+- Existem pelo menos 9 formas diferentes de organizar e configurar o Drivers
+
+As 3 principais:
+- Usar a biblioteca WebDriverManager (atualização automática)
+- Baixar o driver manualmente para dentro do projeto
+ - Fácil de levar para outro computador (levar para viagem)
+ - Ruim porque quando tem atualização precisa adicionar em todos os projetos
+- Baixar o driver manualmente para uma pasta comum do computador
+ - Atualiza o driver em uma pasta, atualizou para todos os projetos
+ - Precisa ter uma pasta no computador e apontar nas variáveis de ambiente
+ (depende da configuração da máquina para executar)
+
+ 
+
+
 
 
 
