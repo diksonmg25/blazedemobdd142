@@ -25,7 +25,7 @@ public class ComprarPassagemPO {
     public String destino;
 
     // Construtor
-    public ComprarPassagemPO(Base base){ // classe Base - package pages
+    public ComprarPassagemPO(Base base) { // classe Base - package pages
         this.driver = base.driver;
     }
 
@@ -40,9 +40,9 @@ public class ComprarPassagemPO {
     @Dado("que acesso o site {string} PO")
     public void que_acesso_o_site_po(String url) {
         homePage = new HomePage(driver); // driver do Selenium que o construtor trouxe da classe Base
-        //2 - instanciar
+        // 2 - instanciar
         homePage.acessarHomePage(url); // 3 - usar
-        //validar se abriu a página correta através do nome da guia
+        // validar se abriu a página correta através do nome da guia
         assertEquals("BlazeDemo", homePage.lerNomeDaGuia());
     }
 
@@ -52,15 +52,26 @@ public class ComprarPassagemPO {
         this.destino = destino;
         homePage.selecionarOrigemDestino(origem, destino);
 
-        // ToDo: na preparação de aula há um ajuste de sincronismo 
-        // é para conseguirmos visualizar o robô escolhendo a opção de origem e destino
+        // Ativar a sincronização para o robô executar devagar
+        // E podermos visualizar o funcionamento
+        // Importante: É só como curiosidade ou em caso de problemas
+        // O indicado é deixar o robô executar o mais rápido possível
+
+        synchronized (driver) {
+            // objeto que deve ser sincronizado - driver do Selenium
+            try {
+                driver.wait(1000); // Selenium vai esperar por 5 segundos
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     @E("clico no botao Find Flights PO")
     public void clico_no_botao_find_flights_po() {
         homePage.clicarbotaoFindFlights();
         // chama a página seguinte --> Reserve
-        reservePage = new ReservePage(driver); 
+        reservePage = new ReservePage(driver);
         // apos clicar no botao FindFlights muda de página
         // abre a pagina do Reserve - reserva de passagens - classe ReservePage
     }
@@ -69,8 +80,29 @@ public class ComprarPassagemPO {
     public void visualiza_a_lista_de_voos_po() {
         assertEquals("BlazeDemo - reserve", reservePage.lerNomeDaGuia());
         assertEquals("Flights from " + this.origem + " to " + this.destino + ":",
-        reservePage.lerCabecalhoVoos());
+                reservePage.lerCabecalhoVoos());
+
+        synchronized (driver) {
+            // objeto que deve ser sincronizado - driver do Selenium
+            try {
+                driver.wait(1000); // Selenium vai esperar por 5 segundos na página
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    @Quando("clico no {int} PO")
+    public void clico_no_po(Integer ordem_do_voo) {
+        reservePage.clicarNoVoo(ordem_do_voo);
+
+        synchronized (driver) {
+            try {
+                driver.wait(1000);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 }
-

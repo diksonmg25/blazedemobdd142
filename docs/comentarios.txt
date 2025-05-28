@@ -18,7 +18,7 @@ Um teste será composto por 2 arquivos:
 
 Projeto utilizando a abordagem Page Objects / Page Factory
 - Pode usar ou não BDD
---> Foco na manutenção e reaproveitamento a longoo prazo
+--> Foco na manutenção e reaproveitamento a longo prazo
 --> Útil para projetos com Ciclo de Vida de Desenvolvimento de Software Longos
 (CVDS/SDLC)
 
@@ -49,6 +49,11 @@ As 3 principais:
  (depende da configuração da máquina para executar)
 
  
+- Erro CDP - depende de atualização da biblioteca do Selenium
+- Deixar mais lento para visualizar melhor (temporária)
+---> Use o syncronized para realizar uma pausa
+
+
 
 
 
